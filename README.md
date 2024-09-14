@@ -28,6 +28,21 @@ cd proyecto6
 - Comando para iniciar el proyecto:
 npm run dev
 npm run seed (para ejecutar la semilla)
+
+- Ejemplos de rutas para hacer gestiones:
+CLUBES:
+http://localhost:3000/api/v1/clubes/pais/Inglaterra (país)
+http://localhost:3000/api/v1/clubes/66d5918092d5fb956bdb945f (ID)
+http://localhost:3000/api/v1/clubes/jugadores/Lamine%20Yamal (jugadores)
+
+JUGADORES:
+http://localhost:3000/api/v1/jugadores/posicion/MCO (posición)
+http://localhost:3000/api/v1/jugadores/edad/24 (edad)
+
+LIGAS:
+http://localhost:3000/api/v1/ligas/clubes/FC%20Barcelona (nombre de club)
+http://localhost:3000/api/v1/ligas/pais/Alemania (país )
+
 ``` 
 ## Características
 - Se pueden solicitar datos por ID, país, nombre, club o posición.
