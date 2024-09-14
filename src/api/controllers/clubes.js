@@ -39,20 +39,22 @@ const postClub = async (req, res, next) => {
 const putClub = async (req, res, next) => {
   try {
     const { id } = req.params
-
     const oldClub = await Club.findById(id)
     if (!oldClub) {
       return res.status(404).json({ message: 'Club no encontrado' })
     }
+    const updatedFields = { ...req.body }
+    delete updatedFields.jugadores
 
-    const clubUpdated = await Club.findByIdAndUpdate(id,
-      { $set: req.body,
-        $addToSet: { jugadores: { $each: req.body.jugadores } }
-      }, { new: true }
+    const clubUpdated = await Club.findByIdAndUpdate(
+      id,
+      { $addToSet: { jugadores: { $each: req.body.jugadores || [] } } },
+      { new: true }
     )
+
     return res.status(200).json(clubUpdated)
   } catch (error) {
-    return res.status(400).json('Solicitud put fallida')
+    return res.status(400).json({ message: 'Solicitud put fallida' })
   }
 }
 const deleteClub = async (req, res, next) => {
