@@ -33,7 +33,6 @@ npm run seed (para ejecutar la semilla)
 CLUBES:
 http://localhost:3000/api/v1/clubes/pais/Inglaterra (país)
 http://localhost:3000/api/v1/clubes/66d5918092d5fb956bdb945f (ID)
-http://localhost:3000/api/v1/clubes/jugadores/Lamine%20Yamal (jugadores)
 
 JUGADORES:
 http://localhost:3000/api/v1/jugadores/posicion/MCO (posición)
