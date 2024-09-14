@@ -27,21 +27,6 @@ const getClubesByPais = async (req, res, next) => {
     return res.status(400).json('Solicitud bypais fallida')
   }
 }
-const getClubByJugadores = async (req, res, next) => {
-  try {
-    const { jugadores } = req.params
-    const jugador = await Jugador.findOne({ nombre: jugadores })
-    if (!jugador) {
-      return res.status(404).json({ message: 'Jugador no encontrado' })
-    }
-    const clubes = await Club.find({ jugadores: jugador._id }).populate(
-      'jugadores'
-    )
-    return res.status(200).json(clubes)
-  } catch (error) {
-    return res.status(400).json('Solicitud byplayer fallida')
-  }
-}
 const postClub = async (req, res, next) => {
   try {
     const newClub = new Club(req.body)
