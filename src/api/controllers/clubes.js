@@ -68,7 +68,6 @@ module.exports = {
   getClubes,
   getClubesById,
   getClubesByPais,
-  getClubByJugadores,
   postClub,
   putClub,
   deleteClub
