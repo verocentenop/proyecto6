@@ -2,7 +2,6 @@ const {
   getClubes,
   getClubesById,
   getClubesByPais,
-  getClubByJugadores,
   postClub,
   putClub,
   deleteClub
@@ -11,7 +10,6 @@ const {
 const clubesRouter = require('express').Router()
 
 clubesRouter.get('/pais/:pais', getClubesByPais)
-clubesRouter.get('/jugadores/:jugadores', getClubByJugadores)
 clubesRouter.get('/:id', getClubesById)
 clubesRouter.get('/', getClubes)
 clubesRouter.post('/', postClub)
