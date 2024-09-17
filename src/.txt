@@ -1,0 +1,5 @@
+RBtL6lBtUGzMfHXG
+
+DB_URL=mongodb+srv://proyecto7:RBtL6lBtUGzMfHXG@cluster0.i1rzy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+JWT_SECRET= 2r390u8yohwgkrbnvwo8yfwghieuvb
